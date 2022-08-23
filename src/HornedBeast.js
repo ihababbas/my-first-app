@@ -25,14 +25,12 @@ class HornedBeast extends React.Component
   
 
     return(
-  
-
         <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src={this.props.imageUrl} alt = {this.props.title} onClick={this.incrementNumOfPets} />
+      <Card.Img variant="top" src={this.props.img} alt = {this.props.title} onClick={this.incrementNumOfPets} />
       <Card.Body>
         <Card.Title> {this.props.title}</Card.Title>
         <Card.Text>
-        {this.props.description}
+        {this.props.des}
         </Card.Text>
         <Card.Text>
         😸 Num of pets: {this.state.numOfPets}
