@@ -37,7 +37,7 @@ class HornedBeast extends React.Component
         <Card.Text>
         😸 Num of pets: {this.state.numOfPets}
         </Card.Text>
-        <Button onClick={this.buttonClicked} variant="primary"> more data</Button>
+        <Button onClick={() =>{this.props.handle(this.props.title,this.props.img,this.props.des)}} variant="info"> more data</Button>
       </Card.Body>
     </Card>
  

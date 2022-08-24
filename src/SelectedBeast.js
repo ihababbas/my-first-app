@@ -6,30 +6,24 @@ import Modal from 'react-bootstrap/Modal';
 
 
 class SelectedBeast extends React.Component {
-    constructor(props) {
-        super(props); 
-    this.state = {
-     show: false
-    }
-}
-    handle() {
-   this.setState({show: !this.state.show})
-    }
+
+
+  
     
     render(){
 return (
        
-    <div>   
-    <Button onClick={()=>{this.handle()}}>open model</Button>
-     <Modal show = {this.state.show} >
-
-        <Modal.Header> head part</Modal.Header>
-        <Modal.Body> HI HI HI</Modal.Body> 
+       
+     <Modal show = {this.props.show} >
+        <Modal.Header> {this.props.selectedBeast.title}</Modal.Header>
+        <Modal.Body> {this.props.selectedBeast.desc}</Modal.Body> 
        <Modal.Footer>
-       <Button onClick={()=>{this.handle()}} >close</Button>
+       <Button variant="secondary" onClick={this.props.handleClose}>
+                            Close
+                        </Button>
        </Modal.Footer>
      </Modal>
-     </div>
+    
 )
 }
 }

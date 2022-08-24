@@ -1,24 +1,19 @@
 import React from 'react';
 import HornedBeast from './HornedBeast';
 
-/*let databeast = data.map(element => 
-    <HornedBeast
-    key = {element._id}
-    title = {element.title}
-    img = {element.image_url}
-    des = {element.description}/>
-    );*/
-class main extends React.Component{
+class Main extends React.Component{
   
     render(){
     return (
      
-        this.props.data.map( element => 
+        this.props.data.map((element,id) => 
     <HornedBeast
-    key = {element._id}
+    key = {id}
     title = {element.title}
     img = {element.image_url}
-    des = {element.description}/>
+    des = {element.description}
+    handle = {this.props.handle}
+    />
     )
    
     )
@@ -29,4 +24,4 @@ class main extends React.Component{
 }
 
 
-export default main;
+export default Main;
