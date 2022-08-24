@@ -19,7 +19,8 @@ class HornedBeast extends React.Component
         this.setState({
             numOfPets : this.state.numOfPets + 1
  
-        })
+        }  )
+        
     }
  
  render(){ 

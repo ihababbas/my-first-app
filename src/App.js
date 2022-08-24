@@ -17,29 +17,17 @@ class App extends React.Component{
             selectedBeast: {}
           }
         }
-        showModal = (name) => {
-      
-          const selectedBeast = data.find(beast => beast.title === name);
-          this.setState({selectedBeast, displayModal:true});
-        }
-        hideModal = () => {this.setState({displayModal: false});
-        }
-        
-        presentFancyBeasts = (lilBeastieData) => {this.setState({lilBeastieData});
-        }
+  
 render(){
 return (
 <div class="body">
 
-<Header decrementTotal={this.decrementNumOfTotalTunas}/> 
+<Header /> 
    <div class= "contanier">
+    
 <Main data= {data} />
 </div>
-<SelectedBeast 
-          displayModal={this.state.displayModal}
-          hideModal={this.hideModal}
-          selectedBeast={this.state.selectedBeast}
-        />
+<SelectedBeast />
 <Footer />
 
 
