@@ -20,8 +20,7 @@ class main extends React.Component{
     img = {element.image_url}
     des = {element.description}/>
     )
-
-        
+   
     )
 
 

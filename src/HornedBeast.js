@@ -18,6 +18,7 @@ class HornedBeast extends React.Component
     incrementNumOfPets = () => {
         this.setState({
             numOfPets : this.state.numOfPets + 1
+ 
         })
     }
  
@@ -25,7 +26,7 @@ class HornedBeast extends React.Component
   
  
     return(
-        <Card style={{ width: '18rem' }}>
+        <Card style={{ width: '18rem' }} >
       <Card.Img variant="top" src={this.props.img} alt = {this.props.title} onClick={this.incrementNumOfPets} />
       <Card.Body>
         <Card.Title> {this.props.title}</Card.Title>
@@ -35,7 +36,7 @@ class HornedBeast extends React.Component
         <Card.Text>
         😸 Num of pets: {this.state.numOfPets}
         </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
+        <Button onClick={this.buttonClicked} variant="primary"> more data</Button>
       </Card.Body>
     </Card>
  
